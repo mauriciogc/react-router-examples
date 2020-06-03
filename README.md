@@ -5,9 +5,11 @@
 
 ## You can see a live demo here
 * [React Router V5 (Basic Example)](https://codesandbox.io/s/react-router-v5-basic-example-7j8yc?file=/src/App.js)
+* [React Router V5 [Example with components]](https://codesandbox.io/s/react-router-v5-example-with-components-y052k)
 
 ## You can download demo here
 * [0.1.0 - Basic Example](https://github.com/mauriciogc/react-router/tree/0.1.0)
+* [0.2.0 - Example with components](https://github.com/mauriciogc/react-router/tree/0.2.0)
 
 
 

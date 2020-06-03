@@ -1,27 +1,41 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Components/Home";
+import Gallery from "./Components/Gallery";
+import About from "./Components/About";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Link to="/">Main page</Link> | 
-        <Link to="/page1">Page 1</Link> | 
-        <Link to="/page2">Page 2</Link>
-      </div>
+    <Fragment>
+      <Router>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">Main page</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </div>
 
-      <Switch>
-        <Route path="/page2">
-          <h1>I'm Page 2</h1>
-        </Route>
-        <Route path="/page1">
-          <h1>I'm Page 1</h1>
-        </Route>
-        <Route path="/">
-          <h1>I'm Main page</h1>
-        </Route>
-      </Switch>
-    </Router>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+      <footer> Hello I'm a little footer</footer>
+    </Fragment>
   );
 }
 
