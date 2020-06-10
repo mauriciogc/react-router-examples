@@ -10,9 +10,12 @@ const Home = () => {
 	return (
 		<div>
 			<h1>Hello, I'm Home component </h1>
+			<hr />
+			<h2>useHistory</h2>
 			<button onClick={handleAbout}>About</button>
 			<button onClick={handleBack}>Back</button>
 			<button onClick={handleForward}>Forward</button>
+			<hr />
 		</div>
 	);
 };
