@@ -4,7 +4,7 @@ import Home from "./Components/Home";
 import Gallery from "./Components/Gallery";
 import About from "./Components/About";
 
-function App() {
+function App() { 
   return (
     <Fragment>
       <Router>

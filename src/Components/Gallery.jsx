@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
-const Gallery = () => (
-	<div>
-		<h1>Hello, I'm Gallery component</h1>
+const Gallery = () => {
+	const [gallery, setGallery] = useState([]);
+	const location = useLocation();
+	useEffect(() => {
+		console.log(location.pathname);
+		const searchParams = new URLSearchParams(location.search);
+		const print = Number(searchParams.getAll("print")[0] || 5);
+		setGallery(
+			new Array(print).fill("https://placem.at/things?w=100&h=100&random=")
+		);
+	}, [location, setGallery]);
+
+	return (
 		<div>
-			<img src="https://placem.at/things?w=100&h=100&random=0" alt="image0" />
-			<img src="https://placem.at/things?w=100&h=100&random=1" alt="image1" />
-			<img src="https://placem.at/things?w=100&h=100&random=2" alt="image2" />
-			<img src="https://placem.at/things?w=100&h=100&random=3" alt="image3" />
-			<img src="https://placem.at/things?w=100&h=100&random=4" alt="image4" />
+			<h1>Hello, I'm Gallery component</h1>
+			<div>
+				{gallery.map((v, i) => (
+					<img src={v + i} alt={v + i} key={i} />
+				))}
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export default Gallery;
