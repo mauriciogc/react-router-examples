@@ -14,7 +14,7 @@ function App() {
               <Link to="/">Main page</Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link to="/gallery/5">Gallery</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -26,7 +26,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/gallery">
+          <Route path="/gallery/:print">
             <Gallery />
           </Route>
           <Route path="/">

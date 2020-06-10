@@ -4,7 +4,7 @@ const Home = () => {
 	const history = useHistory();
 
 	const handleAbout = () => history.push("/about"); //add programmatic routing
-	const handleGallery = () => history.push("/gallery?print=20"); //add programmatic routing
+	const handleGallery = () => history.push("/gallery/20"); //add programmatic routing
 	const handleBack = () => history.goBack(); //Back programmatic routing
 	const handleForward = () => history.goForward(); //Forward programmatic routing
 
@@ -17,7 +17,7 @@ const Home = () => {
 			<button onClick={handleBack}>Back</button>
 			<button onClick={handleForward}>Forward</button>
 			<button onClick={handleGallery}>
-				Go to "Gallery" with params "?print=20"
+				Go to "Gallery" with params "/gallery/20"
 			</button>
 			<hr />
 		</div>

@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const Gallery = () => {
-	const [gallery, setGallery] = useState([]);
-	const location = useLocation();
-	useEffect(() => {
-		console.log(location.pathname);
-		const searchParams = new URLSearchParams(location.search);
-		const print = Number(searchParams.getAll("print")[0] || 5);
-		setGallery(
-			new Array(print).fill("https://placem.at/things?w=100&h=100&random=")
-		);
-	}, [location, setGallery]);
+	const params = useParams();
+	const gallery = Array(Number(params.print)).fill(
+		"https://placem.at/things?w=100&h=100&random="
+	);
 
 	return (
 		<div>
