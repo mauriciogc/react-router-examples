@@ -1,8 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useRouteMatch } from "react-router-dom";
 
 const Gallery = () => {
 	const params = useParams();
+	const routeMatch = useRouteMatch();
+
 	const gallery = Array(Number(params.print)).fill(
 		"https://placem.at/things?w=100&h=100&random="
 	);
@@ -10,6 +12,8 @@ const Gallery = () => {
 	return (
 		<div>
 			<h1>Hello, I'm Gallery component</h1>
+			<h3>Actual url: {routeMatch.url}</h3>
+
 			<div>
 				{gallery.map((v, i) => (
 					<img src={v + i} alt={v + i} key={i} />
