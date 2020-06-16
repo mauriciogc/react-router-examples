@@ -19,7 +19,7 @@
 * [0.2.2 - Example with useLocation](https://github.com/mauriciogc/react-router/tree/0.2.2)
 * [0.2.3 - Example with useParams](https://github.com/mauriciogc/react-router/tree/0.2.3)
 * [0.2.4 - Example with useRouteMatch](https://github.com/mauriciogc/react-router/tree/0.2.4)
-* [0.2.4 - Example with useRouteMatch 2](https://github.com/mauriciogc/react-router/tree/0.2.5)
+* [0.2.5 - Example with useRouteMatch 2](https://github.com/mauriciogc/react-router/tree/0.2.5)
 
 
 
