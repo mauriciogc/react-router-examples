@@ -23,7 +23,7 @@
 * [0.2.4 - Example with useRouteMatch](https://github.com/mauriciogc/react-router/tree/0.2.4)
 * [0.2.5 - Example with useRouteMatch 2](https://github.com/mauriciogc/react-router/tree/0.2.5)
 * [0.3.0 - Example URL Params](https://github.com/mauriciogc/react-router/tree/0.3.0)
-* [0.3.0 - Example Nested Routes](https://github.com/mauriciogc/react-router/tree/0.3.1)
+* [0.3.1 - Example Nested Routes](https://github.com/mauriciogc/react-router/tree/0.3.1)
 
 
 
