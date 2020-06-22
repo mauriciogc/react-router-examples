@@ -1,40 +1,28 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./Components/Home";
-import Gallery from "./Components/Gallery";
-import About from "./Components/About";
+import Clothes from "./Components/Clothes";
 
-function App() { 
+function App() {
   return (
     <Fragment>
       <Router>
         <div>
           <ul>
             <li>
-              <Link to="/">Main page</Link>
+              <Link to="/Mens">Men's</Link>
             </li>
             <li>
-              <Link to="/gallery/5">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
+              <Link to="/Ladies">Ladies</Link>
             </li>
           </ul>
         </div>
 
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/gallery/:print">
-            <Gallery />
-          </Route>
-          <Route path="/">
-            <Home />
+          <Route path="/:type">
+            <Clothes />
           </Route>
         </Switch>
       </Router>
-      <footer> Hello I'm a little footer</footer>
     </Fragment>
   );
 }
