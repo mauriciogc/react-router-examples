@@ -27,7 +27,7 @@
 * [0.3.0 - Example URL Params](https://github.com/mauriciogc/react-router/tree/0.3.0)
 * [0.3.1 - Example Nested Routes](https://github.com/mauriciogc/react-router/tree/0.3.1)
 * [0.3.2 - Example Redirects](https://github.com/mauriciogc/react-router/tree/0.3.2)
-* [0.3.2 - Example Redirects Route](https://github.com/mauriciogc/react-router/tree/0.3.3)
+* [0.3.3 - Example Redirects Route](https://github.com/mauriciogc/react-router/tree/0.3.3)
 
 
 
