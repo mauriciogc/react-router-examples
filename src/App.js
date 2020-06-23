@@ -1,36 +1,25 @@
-import React, { Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Clothes from "./Components/Clothes";
-import NotFound from "./Components/NotFound";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Menu from "./Components/Menu";
+import Brand from "./Components/Brand";
+import Error from "./Components/Error";
 
 function App() {
   return (
-    <Fragment>
+    <div className="App">
       <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/Mens">Men's</Link>
-            </li>
-            <li>
-              <Link to="/Ladies">Ladies</Link>
-            </li>
-            <li>
-              <Link to="/Other">Other</Link>
-            </li>
-          </ul>
-        </div>
-
+        <Menu />
         <Switch>
           <Route path="/error">
-            <NotFound />
+            <Error />
           </Route>
-          <Route path="/:type">
-            <Clothes />
+          <Route path="/:brand">
+            <Brand />
           </Route>
+          <Route path="/">Please select brand...</Route>
         </Switch>
       </Router>
-    </Fragment>
+    </div>
   );
 }
 
