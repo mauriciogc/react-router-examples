@@ -26,6 +26,9 @@ const Clothes = () => {
 				<li>
 					<Link to={`${url}/T-shirts`}>T-shirts</Link>
 				</li>
+				<li>
+					<Link to={`${url}/T-shirts/Aaa`}>Taa-shirts</Link>
+				</li>
 			</ul>
 
 			<Switch>
@@ -34,6 +37,9 @@ const Clothes = () => {
 				</Route>
 				<Route exact path={`${path}/:style`}>
 					<ClothesStyle />
+				</Route>
+				<Route path="*">
+					<Redirect to="/error" />
 				</Route>
 			</Switch>
 		</div>
