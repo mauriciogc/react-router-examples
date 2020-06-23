@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Clothes from "./Components/Clothes";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -14,10 +15,16 @@ function App() {
             <li>
               <Link to="/Ladies">Ladies</Link>
             </li>
+            <li>
+              <Link to="/Other">Other</Link>
+            </li>
           </ul>
         </div>
 
         <Switch>
+          <Route path="/error">
+            <NotFound />
+          </Route>
           <Route path="/:type">
             <Clothes />
           </Route>

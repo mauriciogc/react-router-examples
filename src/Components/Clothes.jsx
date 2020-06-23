@@ -5,13 +5,17 @@ import {
 	Switch,
 	Route,
 	Link,
+	Redirect,
 } from "react-router-dom";
 import ClothesStyle from "./ClothesStyle";
 
 const Clothes = () => {
 	const { type } = useParams();
-	const { path, url } = useRouteMatch();
+	const { path, url } = useRouteMatch("/:type");
 
+	if (!["Mens", "Ladies"].includes(type)) {
+		return <Redirect to="/error" />;
+	}
 	return (
 		<div>
 			<h1>{type}</h1>
@@ -28,7 +32,7 @@ const Clothes = () => {
 				<Route exact path={path}>
 					<h3>Please select a style.</h3>
 				</Route>
-				<Route path={`${path}/:style`}>
+				<Route exact path={`${path}/:style`}>
 					<ClothesStyle />
 				</Route>
 			</Switch>
